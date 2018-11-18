@@ -1,0 +1,23 @@
+language: c
+
+git:
+  depth: 1
+
+env:
+  global:
+    - TOOLCHAIN_SHORT_VERSION=7-2018q2
+    - TOOLCHAIN_LONG_VERSION=gcc-arm-none-eabi-7-2018-q2-update
+
+install:
+    - wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/$TOOLCHAIN_SHORT_VERSION/$TOOLCHAIN_LONG_VERSION-linux.tar.bz2
+    - tar xfj $TOOLCHAIN_LONG_VERSION-linux.tar.bz2
+    - export PATH=$PWD/$TOOLCHAIN_LONG_VERSION/bin:$PATH
+
+before_script:
+  - arm-none-eabi-gcc --version
+
+script:
+  - mkdir ci-build-default
+  - cd ci-build-default
+  - cmake ../
+  - make
