@@ -48,7 +48,7 @@ add_executable(${PROJECT_NAME}
         ${SOURCE_FILES})
 
 target_link_libraries(${PROJECT_NAME}
-        PUBLIC $<TARGET_PROPERTY:libopencm3,LINK_LIBRARIES>)
+        libopencm3)
 
 target_include_directories(${PROJECT_NAME}
         PUBLIC $<TARGET_PROPERTY:libopencm3,INCLUDE_DIRECTORIES>)
