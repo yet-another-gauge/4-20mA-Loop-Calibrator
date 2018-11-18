@@ -17,13 +17,13 @@
  * along with this library. If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* Linker script for STM32F03, 32k flash, 4k RAM. */
+/* Linker script for STM32F09, 256k flash, 32k RAM. */
 
 /* Define memory regions. */
 MEMORY
 {
-	rom (rx) : ORIGIN = 0x08000000, LENGTH = 32K
-	ram (rwx) : ORIGIN = 0x20000000, LENGTH = 4K
+	rom (rx) : ORIGIN = 0x08000000, LENGTH = 256K
+	ram (rwx) : ORIGIN = 0x20000000, LENGTH = 32K
 }
 
 /* Enforce emission of the vector table. */
@@ -43,8 +43,7 @@ SECTIONS
 		. = ALIGN(4);
 	} >rom
 
-	/* C++ Static constructors/destructors, also used for __attribute__
-	 * ((constructor)) and the likes */
+	/* C++ Static constructors/destructors, also used for __attribute__((constructor)) and the likes */
 	.preinit_array : {
 		. = ALIGN(4);
 		__preinit_array_start = .;

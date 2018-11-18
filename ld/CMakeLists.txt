@@ -15,4 +15,4 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this library. If not, see <http://www.gnu.org/licenses/>.
 
-set(LDSCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/stm32f03.ld PARENT_SCOPE)
+set(LDSCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/stm32f09.ld PARENT_SCOPE)
