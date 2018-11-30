@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this library. If not, see <http://www.gnu.org/licenses/>.
 
+# LibOpenCM3. Open-Source lowlevel hardware library for various ARM microcontrollers
+
 set(LIBOPENCM3_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/libopencm3")
 
 set(LIBOPENCM3_IMPORTED_LOCATION "${LIBOPENCM3_DIRECTORY}/lib/libopencm3_stm32f0.a")
@@ -45,3 +47,7 @@ set_target_properties(libopencm3 PROPERTIES
         INCLUDE_DIRECTORIES "${LIBOPENCM3_INCLUDE_DIRECTORIES}"
 
         INTERFACE_POSITION_INDEPENDENT_CODE ON)
+
+# Observer. A pure C implementation of the observer pattern
+
+add_subdirectory(observer)
