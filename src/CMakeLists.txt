@@ -15,4 +15,12 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with this library. If not, see <http://www.gnu.org/licenses/>.
 
-set(SOURCE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/main.c PARENT_SCOPE)
+set(SOURCE_FILES
+        # Indicator
+        ${CMAKE_CURRENT_SOURCE_DIR}/indicator.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/indicator.c
+
+        # Entry point
+        ${CMAKE_CURRENT_SOURCE_DIR}/main.c
+
+        PARENT_SCOPE)
