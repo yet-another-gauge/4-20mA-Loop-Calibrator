@@ -17,6 +17,13 @@
  * along with this library. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <libopencm3/stm32/rcc.h>
+
 int main(void) {
+  /**
+   * Set System Clock PLL at 48MHz from HSI
+   */
+  rcc_clock_setup_in_hsi_out_48mhz();
+
   return 0;
 }
