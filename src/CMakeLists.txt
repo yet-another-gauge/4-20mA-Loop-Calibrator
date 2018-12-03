@@ -20,6 +20,10 @@ set(SOURCE_FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/indicator.h
         ${CMAKE_CURRENT_SOURCE_DIR}/indicator.c
 
+        # Model
+        ${CMAKE_CURRENT_SOURCE_DIR}/model.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/model.c
+
         # Entry point
         ${CMAKE_CURRENT_SOURCE_DIR}/main.c
 
