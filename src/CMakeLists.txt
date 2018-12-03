@@ -24,6 +24,10 @@ set(SOURCE_FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/model.h
         ${CMAKE_CURRENT_SOURCE_DIR}/model.c
 
+        # View
+        ${CMAKE_CURRENT_SOURCE_DIR}/controller.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/controller.c
+
         # Entry point
         ${CMAKE_CURRENT_SOURCE_DIR}/main.c
 
