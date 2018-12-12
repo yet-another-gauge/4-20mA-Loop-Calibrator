@@ -20,6 +20,7 @@ cmake_minimum_required(VERSION 3.5.1)
 project(4-20mA-Loop-Calibrator C)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR cortex-m0)
