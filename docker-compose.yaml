@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  dev:
+    container_name: gcc-arm-none-eabi
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        TOOLCHAIN_SHORT_VERSION: 8-2019q3
+        TOOLCHAIN_LONG_VERSION: gcc-arm-none-eabi-8-2019-q3-update
+    volumes:
+      - type: bind
+        source: .
+        target: /usr/src
