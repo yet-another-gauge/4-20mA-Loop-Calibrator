@@ -24,5 +24,5 @@ root@<hash>:/usr/src# make
 
 ## Dependencies
 
-* [CMake](https://cmake.org/) is an open-source, cross-platform family of tools designed to build, test and package software.
+* [CMake](https://cmake.org/) is an open-source, cross-platform family of tools designed to build, test and package software
 * [LibOpenCM3](http://libopencm3.org/) is open source ARM Cortex-M microcontroller library
