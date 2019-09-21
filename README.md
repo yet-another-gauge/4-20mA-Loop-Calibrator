@@ -26,3 +26,4 @@ root@<hash>:/usr/src# make
 
 * [CMake](https://cmake.org/) is an open-source, cross-platform family of tools designed to build, test and package software
 * [LibOpenCM3](http://libopencm3.org/) is open source ARM Cortex-M microcontroller library
+* [Observer](https://github.com/yet-another-gauge/observer) is a pure C implementation of the observer pattern
