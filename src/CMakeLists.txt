@@ -16,21 +16,9 @@
 # along with this library. If not, see <http://www.gnu.org/licenses/>.
 
 set(SOURCE_FILES
-        # Indicator
-        ${CMAKE_CURRENT_SOURCE_DIR}/indicator.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/indicator.c
-
-        # Model
-        ${CMAKE_CURRENT_SOURCE_DIR}/model.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/model.c
-
-        # View
-        ${CMAKE_CURRENT_SOURCE_DIR}/view.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/view.c
-
-        # Controller
-        ${CMAKE_CURRENT_SOURCE_DIR}/controller.h
-        ${CMAKE_CURRENT_SOURCE_DIR}/controller.c
+        # User button
+        ${CMAKE_CURRENT_SOURCE_DIR}/user-button.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/user-button.c
 
         # Entry point
         ${CMAKE_CURRENT_SOURCE_DIR}/main.c

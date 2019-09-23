@@ -17,17 +17,13 @@
  * along with this library. If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <libopencm3/stm32/rcc.h>
+#ifndef YET_ANOTHER_GAUGE__LOOP_CALIBRATOR__USER_BUTTON_H
+#define YET_ANOTHER_GAUGE__LOOP_CALIBRATOR__USER_BUTTON_H
 
-#include "user-button.h"
+/**
+ * @brief Allocate a struct button_t, intended to be used as an button
+ * @return The user button
+ */
+void user_button_new(void);
 
-int main(void) {
-  // Set System Clock PLL at 48MHz from HSI
-  rcc_clock_setup_in_hsi_out_48mhz();
-
-  user_button_new();
-
-  while (true) { ; }
-
-  return 0;
-}
+#endif // YET_ANOTHER_GAUGE__LOOP_CALIBRATOR__USER_BUTTON_H
