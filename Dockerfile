@@ -9,7 +9,7 @@ ENV TOOLCHAIN_SHORT_VERSION ${TOOLCHAIN_SHORT_VERSION:-"8-2019q3"}
 ENV TOOLCHAIN_LONG_VERSION ${TOOLCHAIN_LONG_VERSION:-"gcc-arm-none-eabi-8-2019-q3-update"}
 
 RUN apt update \
-        && apt install -y bzip2 wget make cmake python2.7 \
+        && apt install -y bzip2 wget make cmake python2.7 openocd \
         && ln -s /usr/bin/python2.7 /usr/bin/python \
         && rm -rf /var/lib/apt/lists/*
 
