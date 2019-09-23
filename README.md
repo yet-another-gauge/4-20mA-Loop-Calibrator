@@ -8,6 +8,8 @@ git clone git@github.com:yet-another-gauge/4-20mA-Loop-Calibrator.git
 git submodule update --init --recursive
 ```
 
+### Build source code inside a Docker container
+
 ```bash
 cd 4-20mA-Loop-Calibrator
 
@@ -20,7 +22,10 @@ root@<hash>:/usr/src# cmake ..
 root@<hash>:/usr/src# make
 ```
 
+## OpenOCD
 
+- `openocd/ST-LINK-V2-1.cfg` specifies configuration to use the `ST-LINK/V2-1` adapter
+- `openocd/STM32-NUCLEO-F091RC.cfg` contains initialization items that are specific to a `STM32 NUCLEO` board
 
 ## Dependencies
 
