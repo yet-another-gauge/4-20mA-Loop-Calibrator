@@ -18,14 +18,33 @@ docker run -v $PWD:/usr/src -it yet-another-gauge/4-20ma-lc /bin/bash
 
 root@<hash>:/usr/src# mkdir build
 root@<hash>:/usr/src# cd build
-root@<hash>:/usr/src# cmake ..
+root@<hash>:/usr/src# cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 root@<hash>:/usr/src# make
 ```
 
-## OpenOCD
+## OpenOCD and GDB
 
 - `openocd/ST-LINK-V2-1.cfg` specifies configuration to use the `ST-LINK/V2-1` adapter
 - `openocd/STM32-NUCLEO-F091RC.cfg` contains initialization items that are specific to a `STM32 NUCLEO` board
+
+```bash
+$ openocd -f interface/stlink-v2-1.cfg -f board/st_nucleo_f0.cfg
+```
+
+```bash
+$ arm-none-eabi-gdb 4-20mA-Loop-Calibrator.elf
+...
+Reading symbols from 4-20mA-Loop-Calibrator.elf...
+(gdb) target remote localhost:3333
+Remote debugging using localhost:3333
+...
+(gdb) monitor reset halt
+...
+(gdb) load
+...
+(gdb) continue
+Continuing.
+```
 
 ## Dependencies
 
