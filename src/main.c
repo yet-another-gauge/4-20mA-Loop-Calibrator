@@ -19,11 +19,17 @@
 
 #include <libopencm3/stm32/rcc.h>
 
+#include "indicator.h"
+
 int main(void) {
   /**
    * Set System Clock PLL at 48MHz from HSI
    */
   rcc_clock_setup_in_hsi_out_48mhz();
+
+  indicator_t* indicator = indicator_new();
+
+  indicator_on(indicator);
 
   return 0;
 }
