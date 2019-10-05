@@ -20,6 +20,7 @@ cmake_minimum_required(VERSION 3.5.1)
 project(4-20mA-Loop-Calibrator C)
 
 set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR cortex-m0)
@@ -44,6 +45,8 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -MD")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fno-common -ffunction-sections -fdata-sections")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -Wundef -Wextra -Wshadow")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-unused-variable -Wimplicit-function-declaration -Wredundant-decls -Wstrict-prototypes -Wmissing-prototypes -Wunreachable-code")
+
+add_compile_options("$<$<CONFIG:DEBUG>:-O0;-g3;-ggdb>")
 
 add_subdirectory(ld)
 add_subdirectory(lib)
