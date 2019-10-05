@@ -28,11 +28,11 @@ root@<hash>:/usr/src# make
 - `openocd/STM32-NUCLEO-F091RC.cfg` contains initialization items that are specific to a `STM32 NUCLEO` board
 
 ```bash
-$ openocd -f interface/stlink-v2-1.cfg -f board/st_nucleo_f0.cfg
+$ openocd -f openocd/ST-LINK-V2-1.cfg -f openocd/STM32-NUCLEO-F091RC.cfg
 ```
 
 ```bash
-$ arm-none-eabi-gdb 4-20mA-Loop-Calibrator.elf
+$ arm-none-eabi-gdb build/4-20mA-Loop-Calibrator.elf
 ...
 Reading symbols from 4-20mA-Loop-Calibrator.elf...
 (gdb) target remote localhost:3333
