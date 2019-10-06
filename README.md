@@ -3,29 +3,31 @@
 
 ## Getting started
 
+### Clone a repository
+
 ```bash
-git clone git@github.com:yet-another-gauge/4-20mA-Loop-Calibrator.git
-git submodule update --init --recursive
+$ git clone git@github.com:yet-another-gauge/4-20mA-Loop-Calibrator.git
+$ git submodule update --init --recursive
 ```
 
 ### Build source code inside a Docker container
 
 ```bash
-cd 4-20mA-Loop-Calibrator
+$ cd 4-20mA-Loop-Calibrator
 
-docker build --tag=yet-another-gauge/4-20ma-lc .
-docker run -v $PWD:/usr/src -it yet-another-gauge/4-20ma-lc /bin/bash
+$ docker build --tag=yet-another-gauge/4-20ma-lc .
+$ docker run -v $PWD:/usr/src -it yet-another-gauge/4-20ma-lc /bin/bash
 
-root@<hash>:/usr/src# mkdir build
-root@<hash>:/usr/src# cd build
-root@<hash>:/usr/src# cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
-root@<hash>:/usr/src# make
+$ root@<hash>:/usr/src# mkdir build
+$ root@<hash>:/usr/src# cd build
+$ root@<hash>:/usr/src# cmake -DCMAKE_BUILD_TYPE=Debug ..
+$ root@<hash>:/usr/src# make
 ```
 
 ## OpenOCD and GDB
 
 - `openocd/ST-LINK-V2-1.cfg` specifies configuration to use the `ST-LINK/V2-1` adapter
-- `openocd/STM32-NUCLEO-F091RC.cfg` contains initialization items that are specific to a `STM32 NUCLEO` board
+- `openocd/STM32-NUCLEO-F091RC.cfg` contains initialization items that are specific to a `STM32 NUCLEO-F091RC` board
 
 ```bash
 $ openocd -f openocd/ST-LINK-V2-1.cfg -f openocd/STM32-NUCLEO-F091RC.cfg
@@ -40,7 +42,7 @@ Remote debugging using localhost:3333
 ...
 (gdb) monitor reset halt
 ...
-(gdb) set substitute-path /usr/src <an absolute path to a directory>
+(gdb) set substitute-path /usr/src <absolute path to the working directory>
 ...
 (gdb) load
 ...
