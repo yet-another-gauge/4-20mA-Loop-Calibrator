@@ -718,3 +718,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+### PlatformIO ###
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
+.pio
+
