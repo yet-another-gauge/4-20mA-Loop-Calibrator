@@ -4,14 +4,12 @@
 ## Getting started
 
 ### Clone a repository
-
 ```bash
 $ git clone git@github.com:yet-another-gauge/4-20mA-Loop-Calibrator.git
 $ git submodule update --init --recursive
 ```
 
 ### Build source code inside a Docker container
-
 ```bash
 $ cd 4-20mA-Loop-Calibrator
 
@@ -25,7 +23,6 @@ $ root@<hash>:/usr/src# make
 ```
 
 ## OpenOCD and GDB
-
 - `openocd/ST-LINK-V2-1.cfg` specifies configuration to use the `ST-LINK/V2-1` adapter
 - `openocd/STM32-NUCLEO-F091RC.cfg` contains initialization items that are specific to a `STM32 NUCLEO-F091RC` board
 
@@ -51,7 +48,5 @@ Continuing.
 ```
 
 ## Dependencies
-
-* [CMake](https://cmake.org/) is an open-source, cross-platform family of tools designed to build, test and package software
 * [LibOpenCM3](http://libopencm3.org/) is open source ARM Cortex-M microcontroller library
 * [Observer](https://github.com/yet-another-gauge/observer) is a pure C implementation of the observer pattern
