@@ -1,7 +1,7 @@
 /*
- * This file is part of the 'Yet another gauge' project.
+ * This file is part of the libopencm3 project.
  *
- * Copyright (C) 2018 Ivan Dyachenko <vandyachen@gmail.com>
+ * Copyright (C) 2009 Uwe Hermann <uwe@hermann-uwe.de>
  *
  * This library is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Lesser General Public License as published by
@@ -10,11 +10,11 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with this library. If not, see <http://www.gnu.org/licenses/>.
+ * along with this library.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* Linker script for STM32F09, 256k flash, 32k RAM. */
@@ -26,8 +26,8 @@ MEMORY
 	ram (rwx) : ORIGIN = 0x20000000, LENGTH = 32K
 }
 
-/* Enforce emission of the vector table. */
-EXTERN(vector_table)
+/* Enforce emmition of the vector table. */
+EXTERN (vector_table)
 
 /* Define the entry point of the output file. */
 ENTRY(reset_handler)
@@ -43,7 +43,8 @@ SECTIONS
 		. = ALIGN(4);
 	} >rom
 
-	/* C++ Static constructors/destructors, also used for __attribute__((constructor)) and the likes */
+	/* C++ Static constructors/destructors, also used for __attribute__
+	 * ((constructor)) and the likes */
 	.preinit_array : {
 		. = ALIGN(4);
 		__preinit_array_start = .;
