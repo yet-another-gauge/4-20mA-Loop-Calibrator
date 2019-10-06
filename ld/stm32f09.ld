@@ -10,11 +10,11 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with this library.  If not, see <http://www.gnu.org/licenses/>.
+ * along with this library. If not, see <http://www.gnu.org/licenses/>.
  */
 
 /* Linker script for STM32F09, 256k flash, 32k RAM. */
@@ -27,7 +27,7 @@ MEMORY
 }
 
 /* Enforce emmition of the vector table. */
-EXTERN (vector_table)
+EXTERN(vector_table)
 
 /* Define the entry point of the output file. */
 ENTRY(reset_handler)
