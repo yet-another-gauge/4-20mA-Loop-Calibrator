@@ -21,6 +21,11 @@
 
 #include "indicator.h"
 
+void infinite_loop(void) {
+  while (1)
+    asm volatile("");
+}
+
 int main(void) {
   /**
    * Set System Clock PLL at 48MHz from HSI
@@ -30,6 +35,10 @@ int main(void) {
   indicator_t* indicator = indicator_new();
 
   indicator_on(indicator);
+
+  indicator_free(indicator);
+
+  infinite_loop();
 
   return 0;
 }
